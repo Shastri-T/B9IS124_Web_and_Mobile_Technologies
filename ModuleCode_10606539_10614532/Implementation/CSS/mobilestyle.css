@@ -1,0 +1,51 @@
+@import "webstyle.css";
+
+  
+  @media screen and (max-width:680px) {
+
+    ul.navLinks li:not(:last-child) 
+    {
+        display: none;
+    }
+
+    ul.navLinks li.icon {
+      float: right;
+      display: inline-block;
+    }
+
+    ul.navLinks.responsive 
+    {
+        position: relative;
+    }
+
+    ul.navLinks.responsive li.icon 
+    {
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+
+    ul.navLinks.responsive li 
+    {
+      float: none;
+      display: inline;
+    }
+
+    ul.navLinks.responsive li a 
+    {
+      display: block;
+      text-align: left;
+    }
+
+    .nav > .nav-links {
+        position:relative;    
+    }
+
+    img{
+      height: 100%;
+      }
+
+      .container{
+        width: 90%;
+        }
+  }
