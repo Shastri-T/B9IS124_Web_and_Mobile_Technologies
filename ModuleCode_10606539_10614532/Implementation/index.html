@@ -829,7 +829,7 @@
                   $.each(products_list, function() {
 
                     dynamicdiv+=
-                    "<div class='col'>  <div class='card'>  <span style='display: inline-block' class='fa fa-star'></span><span style='display: inline-block' class='fa fa-star'></span><span style='display: inline-block' class='fa fa-star'></span><span style='display: inline-block' class='fa fa-star'></span><span class='fa fa-star'></span> <img src='"+this.featuredImage+"' class='card-img-top' alt='...'>    <div class='card-body text-center'>      <h5 class='card-title'>"+this.name+"</h5>      <h4 class='card-text text-danger'>₹ 48,000</h4>      <button type='button' class='btn btn-outline-primary'>Add to cart</button>    </div>  </div></div>";
+                    "<div class='col'>  <div class='card'>   <span style='display: inline-block' class='fa fa-star'></span><span style='display: inline-block' class='fa fa-star'></span><span style='display: inline-block' class='fa fa-star'></span><span style='display: inline-block' class='fa fa-star'></span><span class='fa fa-star'></span> <a href='product.html?id="+this.id+"'> <img src='"+this.featuredImage+"'  class='card-img-top' alt='...'>  </a>  <div class='card-body text-center'>      <h5 class='card-title'>"+this.name+"</h5>      <h4 class='card-text text-danger'>₹ 48,000</h4>      <button type='button' class='btn btn-outline-primary'>Add to cart</button>    </div>  </div></div>";
                     /* $('#products_catalog').append(
                     '<tr><td>'
                     + this.id
