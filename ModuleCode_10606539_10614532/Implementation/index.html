@@ -5,54 +5,87 @@
         <meta name="viewport" content="width=device-width">
         <title>Irish Fitness Factory</title>
         <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet">
+                
+        <!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"> -->
+               
         <link rel="stylesheet" href="./CSS/webstyle.css"  media="screen and (min-width: 680px)">
         <link rel="stylesheet" href="./CSS/mobilestyle.css"  media="screen and (max-width: 680px)">
     </head>
+<!--
+    **********************************************************************************************************************************************************************
+    **********************************************************************************************************************************************************************
+    **********************************************************************************************************************************************************************
+-->
+
 
     <body>
-        
-        <div class="header">
-            <div class="logo"></div> 
+            <!--<div class="header">
+                <a href="./index.html"> <div class="logo"></div> </a>
+            </div>-->
 
-            <div class="nav">
-                 <div class="nav-links">
-                    <ul class="navLinks">
-                        <li> <a class="active" href="#Home" >Home</a></li>
-                        <li> <a href="#About" >About</a></li>
-                        <li> <a href="#Services" >Services</a></li>
-                        <li> <a href="#Portfolio" >Portfolio</a></li>
-                        <li> <a href="#Contact" >Contact</a></li>
-                        <li class="icon">
-                          <a href="javascript:void(0);" style="font-size:15px;" onclick="myFunction()">☰</a>
-                    </ul>
-                 </div>
-               </div>               
+            <div class="container">
+                <a href="./index.html"> <div class="logo"></div> </a>
+                
+                <div class="hm-right">        
+                </div>
+                
+                 
+                <div  class="nav">
+                    <div class="nav-links">
+                       <ul class="navLinks">
+                           <li> <a class="active" href="#Home" >Free Weights</a></li>
+                           <li> <a href="#About" >Squat Racks</a></li>
+                           <li> <a href="#Services" >Cardio</a></li>
+                           <li> <a href="#Portfolio" >Studio</a></li>
+                           <li> <a href="#Contact" >Machines</a></li>
+                           <li> <a href="#Contact" >Storage</a></li>
+                           <li class="icon">
+                             <a href="javascript:void(0);" style="font-size:15px;" onclick="myFunction()">☰</a>
+                       </ul>
+                    </div>
+               </div>
+                <div class="hm-middle">
+                    <form id="form-searchbar" class="searchbar-form" action="/wholesale" method="get" data-ishotwordsearch="true" data-actionurl="//www.aliexpress.com/w/wholesale-human-hair-wigs.html" data-widget-cid="widget-6">
+                                               
 
-               
-        </div>
+                        
 
-        <div class="main"> 
-          
-          <div>
-            <input id="search" type="text" name="q" value="" placeholder="Search the factory..." class="input-text" maxlength="128" role="combobox" aria-haspopup="false" aria-autocomplete="both" autocomplete="off">
-          </div>
+                        
 
-          <div class="container p-0 mt-5 mb-5">
-            <div id="productcatalogdiv" class="row row-cols-1 row-cols-lg-4 row-cols-md-2 g-4">
+                       <div class="searchbar-operate-box">                                                            
+                        <input type="submit" class="search-button" value="">
+                    </div>
 
+                            <div class="search-key-box">
+                                
+                                <input type="text" placeholder="search the fitness factory" maxlength="50" autocomplete="off" value="" name="SearchText" class="search-key" id="search-key" data-spm-anchor-id="a2g0o.home.1000002.i0.17ef2145vPeOnp">
+                            </div>
+
+                    <div class="ui-autocomplete" data-widget-cid="widget-7" style="width: 641px; z-index: 99; display: none; position: absolute; left: -9999px; top: -9999px;">        
+                        <ul class="ui-autocomplete-ctn " data-role="items">        
+                        </ul>
+                    </div>
+                
+                </form>
+                                
             </div>
-          </div>
-          
         </div>
-
-        <script>
+               
     
+
+
+    <br/>
+
+        <div class="main">
+            <ul id="productcatalog" class="cards">
+            </ul>
+        </div>
+    
+
+
+    <script>    
     var dynamicdiv="";
-
-
     products_list =
           
     [
@@ -60,8 +93,9 @@
     {
         "id": "1",
         "name": "Treadmill Endurance",
+        "category":"treadmill",
         "featuredImage": "./Media/product_images/Treadmill_Endurance_T85.png",
-        "price": "Euro: 5700€",
+        "price": "5700 €",
         "features": [
             {
                 "feature1": "Tablet / Phone Holder",
@@ -97,9 +131,9 @@
 
 {
     "id": "2",
-    "name": "TreadClimber",
+    "name": "Treadclimber Treadmill",
     "featuredImage": "./Media/product_images/TreadClimber_MS_100X.png",
-    "price": "Euro: 6200€",
+    "price": "6200 €",
     "features": [
         {
             "feature1": "3.0HP Motor",
@@ -137,7 +171,7 @@
     "id": "3",
     "name": "Combination Treadmill",
     "featuredImage": "./Media/product_images/Combination_Treadmill_AC_SX466.png",
-    "price": "4800€",
+    "price": "4800 €",
     "features": [
         {
             "feature1": "Fully Backlit LCD Display",
@@ -174,7 +208,7 @@
     "id": "4",
     "name": "Dead Lift Shrug Bar",
     "featuredImage": "./Media/product_images/Dead_Lift_Shrug_Bar.png",
-    "price": "1100€",
+    "price": "1100 €",
     "features": [
         {
             "feature1": "Accelerate your weight",
@@ -203,7 +237,7 @@
     "id": "5",
     "name": "Hex Dumbbells Solid Pairs",
     "featuredImage": "./Media/product_images/Hex_Dumbbells_Solid Pairs.png",
-    "price": "700€",
+    "price": "700 €",
     "features": [
         {
             "feature1": "Hex dumbbells are ideal for home gym",
@@ -233,7 +267,7 @@
     "id": "6",
     "name": "Dumbbell Set Adjustable",
     "featuredImage": "./Media/product_images/Dumbbell_Set_Adjustable.png",
-    "price": "949€",
+    "price": "949 €",
     "features": [
         {
             "feature1": "Use for joint-isolation exercises",
@@ -269,7 +303,7 @@
     "id": "7",
     "name": "Tricep Bicep Rope",
     "featuredImage": "./Media/product_images/KOMODO_Tricep_Rope_Bicep_Pull_Down_Cable.png",
-    "price": "650€",
+    "price": "650 €",
     "features": [
         {
             "feature1": "Triceps, biceps, shoulders and abs- all effectively trained",
@@ -299,7 +333,7 @@
     "id": "8",
     "name": "Chest Supported Row",
     "featuredImage": "./Media/product_images/Chest_Supported_Row.png",
-    "price": "2650€",
+    "price": "2650 €",
     "features": [
         {
             "feature1": "Increase stability and safety of pull exercise",
@@ -334,7 +368,7 @@
     "id": "9",
     "name": "Push Ups Stands",
     "featuredImage": "./Media/product_images/Push_Ups_Stands.png",
-    "price": "1050€",
+    "price": "1050 €",
     "features": [
         {
             "feature1": "Engage more muscles to maximize results",
@@ -370,7 +404,7 @@
     "id": "10",
     "name": "Leg Exercise 3D Models",
     "featuredImage": "./Media/product_images/Leg_Exercise_3D_Models.png",
-    "price": "3500€",
+    "price": "3500 €",
     "features": [
         {
             "feature1": "Strengthens the core",
@@ -399,7 +433,7 @@
     "id": "11",
     "name": "Bolt Station Strength Cable Machine",
     "featuredImage": "./Media/product_images/Bolt_Station_Strength_Cable_Machine.png",
-    "price": "7000€",
+    "price": "7000 €",
     "features": [
         {
             "feature1": "Lat pull-down",
@@ -435,7 +469,7 @@
     "id": "12",
     "name": "Pullover Machine",
     "featuredImage": "./Media/product_images/Pullover_Machine.png",
-    "price": "4500€",
+    "price": "4500 €",
     "features": [
         {
             "feature1": "Strengthen the chest musculature",
@@ -470,7 +504,7 @@
     "id": "13",
     "name": "Decline Sit up Bench",
     "featuredImage": "./Media/product_images/Decline_Sit_up_Bench.png",
-    "price": "2500€",
+    "price": "2500 €",
     "features": [
         {
             "feature1": "Ideal for stretching, abs and leg work out",
@@ -506,7 +540,7 @@
     "id": "14",
     "name": "Kamachi Multistation",
     "featuredImage": "./Media/product_images/Kamachi_Multistation.png",
-    "price": "6500€",
+    "price": "6500 €",
     "features": [
         {
             "feature1": "Heavy Gauge Construction",
@@ -543,7 +577,7 @@
     "id": "15",
     "name": "Titan T1 Gym",
     "featuredImage": "./Media/product_images/Titan_T1_Gym.png",
-    "price": "25000€",
+    "price": "25000 €",
     "features": [
         {
             "feature1": "Unbelievable durability and reliability",
@@ -579,7 +613,7 @@
     "id": "16",
     "name": "TuffStuff Apollo",
     "featuredImage": "./Media/product_images/TuffStuff_Apollo_7400.png",
-    "price": "17000€",
+    "price": "17000 €",
     "features": [
         {
             "feature1": "Allows multiple simultaneous users",
@@ -615,7 +649,7 @@
     "id": "17",
     "name": "Hack Squat Machine",
     "featuredImage": "./Media/product_images/Hack_Squat_Machine.png",
-    "price": "9000€",
+    "price": "9000 €",
     "features": [
         {
             "feature1": "It works the entire lower body",
@@ -650,7 +684,7 @@
     "id": "18",
     "name": "Bolt Seated Leg Cul",
     "featuredImage": "./Media/product_images/Bolt_Seated_Leg_Cul.png",
-    "price": "5500€",
+    "price": "5500 €",
     "features": [
         {
             "feature1": "Use to increase overall leg strength",
@@ -685,7 +719,7 @@
     "id": "19",
     "name": "Peloton Indoor Exercise Bicycle",
     "featuredImage": "./Media/product_images/Peloton_Indoor_Exercise_Bicycle.png",
-    "price": "2500€",
+    "price": "2500 €",
     "features": [
         {
             "feature1": "It includes an LCD monitor for viewing live-streamed workouts",
@@ -704,7 +738,7 @@
     {
         "person": "Nancy",
         "comment": "Excellent",
-        "rating": 5
+        "rating": 4
     },
 
     {
@@ -721,7 +755,7 @@
     "id": "20",
     "name": "Leg Exercise AZ799",
     "featuredImage": "./Media/product_images/Leg_Exercise_AZ799.png",
-    "price": "7500€",
+    "price": "7500 €",
     "features": [
         {
             "feature1": "Maintains good body symmetry",
@@ -733,13 +767,13 @@
     {
         "person": "Victoria",
         "comment": "Good",
-        "rating": 4
+        "rating": 3
     },
 
     {
         "person": "Adam",
         "comment": "Great",
-        "rating": 5
+        "rating": 3
     }
 
 ]
@@ -750,7 +784,7 @@
     "id": "21",
     "name": "Ab Power Wheel",
     "featuredImage": "./Media/product_images/Ab_Power_Wheel.png",
-    "price": "200€",
+    "price": "200 €",
     "features": [
         {
             "feature1": "Ab wheels work core muscles",
@@ -762,19 +796,19 @@
     {
         "person": "Nicole",
         "comment": "Excellent",
-        "rating": 5
+        "rating": 2
     },
 
     {
         "person": "Claudia",
         "comment": "Excellent",
-        "rating": 5
+        "rating": 2
     },
 
     {
         "person": "Nancy",
         "comment": "Awesome",
-        "rating": 5
+        "rating": 2
     }
 
 ]
@@ -785,7 +819,7 @@
     "id": "22",
     "name": "Spin Exercise",
     "featuredImage": "./Media/product_images/Spin_Exercise.png",
-    "price": "3200€",
+    "price": "3200 €",
     "features": [
         {
             "feature1": "Low impact exercise",
@@ -798,19 +832,19 @@
     {
         "person": "Andrew",
         "comment": "Excellent",
-        "rating": 5
+        "rating": 1
     },
 
     {
         "person": "Robert",
         "comment": "Great",
-        "rating": 4
+        "rating": 1
     },
 
     {
         "person": "Claudia",
         "comment": "Awesome",
-        "rating": 5
+        "rating": 1
     }
 
 ]
@@ -828,19 +862,46 @@
 
                   $.each(products_list, function() {
 
-                    dynamicdiv+=
-                    "<div class='col'>  <div class='card'>   <span style='display: inline-block' class='fa fa-star'></span><span style='display: inline-block' class='fa fa-star'></span><span style='display: inline-block' class='fa fa-star'></span><span style='display: inline-block' class='fa fa-star'></span><span class='fa fa-star'></span> <a href='product.html?id="+this.id+"'> <img src='"+this.featuredImage+"'  class='card-img-top' alt='...'>  </a>  <div class='card-body text-center'>      <h5 class='card-title'>"+this.name+"</h5>      <h4 class='card-text text-danger'>₹ 48,000</h4>      <button type='button' class='btn btn-outline-primary'>Add to cart</button>    </div>  </div></div>";
-                    /* $('#products_catalog').append(
-                    '<tr><td>'
-                    + this.id
-                    + '</td><td>'
-                    + this.name +
-                    '</td></tr>'
-                    );
-                    }); */                    
-            })
-            
-            $("#productcatalogdiv").append(dynamicdiv);
+                    final_rating=0;
+                    actual_rating=0;
+
+                    for(var i=0;i<this.reviews.length;i++)
+                    {
+                        final_rating+=this.reviews[i].rating
+                    } 
+
+                    actual_rating=Math.round(final_rating/this.reviews.length*10)/10;
+                    final_rating=Math.round(final_rating/this.reviews.length);
+
+                    
+                    if(final_rating==5)
+                    {
+                        dynamicdiv+="<li class='cards_item'><div class='card'><div class='card_image'><img src='"+this.featuredImage+"'></div><div class='card_content'><h1 class='card_title'>"+ this.name +"</h1> <div class='card_price'><span > Price: "+ this.price +"</span></div> <div id='ratings' class='rating5star'><span class='tooltiptext'>"+actual_rating+" out of 5</span><span>☆</span><span>☆</span><span>☆</span><span>☆</span><span>☆</span></div>" + "<div class='card_review'> <span>"+ this.reviews.length +" Reviews </span> </div><button id='view_product_detail' class='btn card_btn btn-grad'>More</button> <button id='add_to_cart' class='btn card_btn btn-grad'>Add to Cart</button></div></div></li>";
+                    }
+
+                    if(final_rating==4)
+                    {
+                        dynamicdiv+="<li class='cards_item'><div class='card'><div class='card_image'><img src='"+this.featuredImage+"'></div><div class='card_content'><h1 class='card_title'>"+ this.name +"</h1> <div class='card_price'><span > Price: "+ this.price +"</span></div> <div id='ratings' class='rating4star'><span class='tooltiptext'>"+actual_rating+" out of 5</span><span>☆</span><span>☆</span><span>☆</span><span>☆</span><span>☆</span></div>" + "<div class='card_review'> <span>"+ this.reviews.length +" Reviews </span></div><button id='view_product_detail' class='btn card_btn btn-grad'>More</button> <button id='add_to_cart' class='btn card_btn btn-grad'>Add to Cart</button></div></div></li>";
+                    }
+
+                    if(final_rating==3)
+                    {
+                        dynamicdiv+="<li class='cards_item'><div class='card'><div class='card_image'><img src='"+this.featuredImage+"'></div><div class='card_content'><h1 class='card_title'>"+ this.name +"</h1> <div class='card_price'><span > Price: "+ this.price +"</span></div> <div id='ratings' class='rating3star'><span class='tooltiptext'>"+actual_rating+" out of 5</span><span>☆</span><span>☆</span><span>☆</span><span>☆</span><span>☆</span></div>" + "<div class='card_review'> <span>"+ this.reviews.length +" Reviews </span></div><button id='view_product_detail' class='btn card_btn btn-grad'>More</button> <button id='add_to_cart' class='btn card_btn btn-grad'>Add to Cart</button></div></div></li>";
+                    }
+
+                    if(final_rating==2)
+                    {
+                        dynamicdiv+="<li class='cards_item'><div class='card'><div class='card_image'><img src='"+this.featuredImage+"'></div><div class='card_content'><h1 class='card_title'>"+ this.name +"</h1> <div class='card_price'><span > Price: "+ this.price +"</span></div> <div id='ratings' class='rating2star'><span class='tooltiptext'>"+actual_rating+" out of 5</span><span>☆</span><span>☆</span><span>☆</span><span>☆</span><span>☆</span></div>" + "<div class='card_review'> <span>"+ this.reviews.length +" Reviews </span></div><button id='view_product_detail' class='btn card_btn btn-grad'>More</button> <button id='add_to_cart' class='btn card_btn btn-grad'>Add to Cart</button></div></div></li>";
+                    }
+
+                    if(final_rating==1)
+                    {
+                        dynamicdiv+="<li class='cards_item'><div class='card'><div class='card_image'><img src='"+this.featuredImage+"'></div><div class='card_content'><h1 class='card_title'>"+ this.name +"</h1> <div class='card_price'><span > Price: "+ this.price +"</span></div> <div id='ratings' class='rating1star'><span class='tooltiptext'>"+actual_rating+" out of 5</span><span>☆</span><span>☆</span><span>☆</span><span>☆</span><span>☆</span></div>" + "<div class='card_review'> <span>"+ this.reviews.length +" Reviews </span></div><button id='view_product_detail' class='btn card_btn btn-grad'>More</button> <button id='add_to_cart' class='btn card_btn btn-grad'>Add to Cart</button></div></div></li>";
+                    }
+
+            });
+
+            $("#productcatalog").append(dynamicdiv);
         })
 
             function myFunction() {
@@ -848,9 +909,7 @@
             }
 
         </script>
-    </body>
-
-    
+    </body>   
 
 </html>   
 
