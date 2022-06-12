@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="icon" href="./media/icon.png" >
+        <meta name="viewport" content="width=device-width">
+        <title>Irish Fitness Factory</title>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+        <!--
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"> 
+        -->
+
+        <link rel="stylesheet" href="./CSS/webstyle.css"  media="screen and (min-width: 680px)">
+        <link rel="stylesheet" href="./CSS/mobilestyle.css"  media="screen and (max-width: 680px)">
+    </head>
+
+    <body>
+
+      
+        <div class="container">
+
+            <a href="./index.html"> <div class="logo"></div> </a>            
+            <a href="./index.html"> <div class="cart"></div> </a>
+             
+            <div  class="nav">
+                <div class="nav-links">
+                   <ul class="navLinks">
+                       <!-- <li> <a class="active" href="#Home" >Free Weights</a></li>
+                       <li> <a href="#About" >Squat Racks</a></li>
+                       <li> <a href="#Services" >Cardio</a></li>
+                       <li> <a href="#Portfolio" >Studio</a></li>
+                       <li> <a href="#Contact" >Machines</a></li>
+                       <li> <a href="#Contact" >Storage</a></li> -->
+                       <li class="icon">
+                         <a href="javascript:void(0);" style="font-size:15px;" onclick="myFunction()">☰</a>
+                   </ul>
+                </div>
+           </div>
+        </div>
+
+        <div id="cart"> 
+
+        
+        <div class="main">           
+          <div class='breadcrum'> <span> <a class='breadcrumlinks' href='./index.html'> Home </a> </span> <span>&nbsp;/&nbsp;Checkout</span> <span id='product_name'> </span> </div> 
+              <ul id="product-card" class="cards">
+              </ul>
+  
+              <!--
+              <div class="productstock">
+                  <span>
+                      <select> </select>
+                  </span>
+             
+                  <span>
+                      <button id='add_to_cart' class='btn card_btn btn-grad'>Add to Cart</button> 
+                  </span>
+              </div>
+              -->
+  
+              </div>
+
+              <br/><br/>
+
+
+        <div class="row">
+          <div class="col-25">
+            <div class="cartcontainer">
+              <h4>Cart
+                <span class="price" style="color:black">
+                  <i class="fa fa-shopping-cart"></i>
+                  <b>4</b>
+                </span>
+              </h4>
+              <p><a href="#">Product 1</a> <span class="price">$15</span></p>
+              <p><a href="#">Product 2</a> <span class="price">$5</span></p>
+              <p><a href="#">Product 3</a> <span class="price">$8</span></p>
+              <p><a href="#">Product 4</a> <span class="price">$2</span></p>
+              <hr>
+              <p>Total <span class="price" style="color:black"><b>$30</b></span></p>
+            </div>
+          </div>
+
+
+            <div class="col-75">
+              <div class="cartcontainer">
+                <form action="/action_page.php">
+          
+                  <div class="row">
+                    <div class="col-50">
+                      <h3>Billing Address</h3>
+                      <label for="fname"><i class="fa fa-user"></i> Full Name</label>
+                      <input class="forminput" type="text" id="fname" name="firstname" placeholder="John M. Doe">
+                      <label for="email"><i class="fa fa-envelope"></i> Email</label>
+                      <input class="forminput" type="text" id="email" name="email" placeholder="john@example.com">
+                      <label for="adr"><i class="fa fa-address-card-o"></i> Address</label>
+                      <input class="forminput" type="text" id="adr" name="address" placeholder="542 W. 15th Street">
+                      <label for="city"><i class="fa fa-institution"></i> City</label>
+                      <input class="forminput" type="text" id="city" name="city" placeholder="New York">
+          
+                      <div class="row">
+                        <div class="col-50">
+                          <label for="state">State</label>
+                          <input class="forminput" type="text" id="state" name="state" placeholder="NY">
+                        </div>
+                        <div class="col-50">
+                          <label for="zip">Zip</label>
+                          <input class="forminput" type="text" id="zip" name="zip" placeholder="10001">
+                        </div>
+                      </div>
+                    </div>
+          
+                    <div class="col-50">
+                      <h3>Payment</h3>
+                      
+                      <label for="cname">Name on Card</label>
+                      <input class="forminput" type="text" id="cname" name="cardname" placeholder="John More Doe">
+                      <label for="ccnum">Credit card number</label>
+                      <input class="forminput" type="text" id="ccnum" name="cardnumber" placeholder="1111-2222-3333-4444">
+                      <label for="expmonth">Exp Month</label>
+                      <input class="forminput" type="text" id="expmonth" name="expmonth" placeholder="September">
+          
+                      <div class="row">
+                        <div class="col-50">
+                          <label for="expyear">Exp Year</label>
+                          <input class="forminput" type="text" id="expyear" name="expyear" placeholder="2018">
+                        </div>
+                        <div class="col-50">
+                          <label for="cvv">CVV</label>
+                          <input class="forminput" type="text" id="cvv" name="cvv" placeholder="352">
+                        </div>
+                      </div>
+                    </div>
+          
+                  </div>
+                  
+                  <input type="submit" value="Continue to checkout" class="btn-grad">
+                </form>
+              </div>
+            </div>
+          
+            
+          </div>
+
+        </div>
+
+          <script>
+            $(document).ready(function()
+            {
+
+menu_linkshtml="";
+menu_links = [];
+navlink="";
+products_list=JSON.parse(localStorage.getItem("json"));
+
+final_rating=0;
+actual_rating=0;
+
+$.each(products_list, function(index, value) {
+    if ($.inArray(value.category, menu_links) === -1) {
+        menu_links.push(value.category);
+    }
+});
+
+menu_links.splice(0,0,"Home");
+
+for(var i=0;i<menu_links.length;i++)
+{
+    if(i==0)
+    {
+        menu_linkshtml="<li class='active' style='cursor:pointer'> <a href='./index.html'>"+menu_links[i]+"</a></li>";
+    }
+    else
+    {
+        navlink="./index.html?cat="+menu_links[i].trim();
+        menu_linkshtml+="<li style='cursor:pointer'> <a href="+navlink+">"+menu_links[i]+"</a></li>";
+    }
+}
+
+$(".navLinks").append(menu_linkshtml);
+
+$('li').removeClass('active');
+
+            });
+
+            
+
+          </script>
+    </body>
+
+    </html>

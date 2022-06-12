@@ -1,0 +1,764 @@
+[
+
+    {
+        "id": "1",
+        "name": "Treadmill Endurance",
+        "category":"treadmill",
+        "featuredImage": "./Media/product_images/Treadmill_Endurance_T85.png",
+        "price": "5700 €",
+        "features": [
+            {
+                "feature1": "Tablet / Phone Holder",
+                "feature2": "LED Display Computer",
+                "feature3": "Pulse Sensors",
+                "feature4": "Deck size: 121cm x 42cm"
+
+            }
+        ],
+        "reviews": [
+        {
+            "person": "Cody",
+            "comment": "Excellent product and easy to assemble",
+            "rating": 5
+        },
+
+        {
+            "person": "Claudia",
+            "comment": "Great Product",
+            "rating": 4
+        },
+
+        {
+            "person": "Adam",
+            "comment": "Good Product",
+            "rating": 3
+        }
+
+    ]
+
+},
+
+
+{
+    "id": "2",
+    "name": "Treadclimber Treadmill",
+    "featuredImage": "./Media/product_images/TreadClimber_MS_100X.png",
+    "price": "6200 €",
+    "features": [
+        {
+            "feature1": "3.0HP Motor",
+            "feature2": "Top running speed: 16kph",
+            "feature3": "Handlebar pulse sensors",
+            "feature4": "Maximum user weight: 130kg"
+
+        }
+    ],
+    "reviews": [
+    {
+        "person": "Nicole",
+        "comment": "Awesome Product with multiple features",
+        "rating": 5
+    },
+
+    {
+        "person": "Claudia",
+        "comment": "Good Product",
+        "rating": 3
+    },
+
+    {
+        "person": "Sara",
+        "comment": "Great Product",
+        "rating": 4
+    }
+
+]
+
+},
+
+
+{
+    "id": "3",
+    "name": "Combination Treadmill",
+    "featuredImage": "./Media/product_images/Combination_Treadmill_AC_SX466.png",
+    "price": "4800 €",
+    "features": [
+        {
+            "feature1": "Fully Backlit LCD Display",
+            "feature2": "Heart-Rate Monitor",
+            "feature3": "Water Bottle & Media Shelf/Tablet Holder",
+            "feature4": "1.75HP Motor"
+
+        }
+    ],
+    "reviews": [
+    {
+        "person": "Robert",
+        "comment": "Great Product",
+        "rating": 4
+    },
+
+    {
+        "person": "Monica",
+        "comment": "Excellent Product",
+        "rating": 5
+    },
+
+    {
+        "person": "Gilbert",
+        "comment": "Good Product",
+        "rating": 4
+    }
+
+]
+
+},
+
+{
+    "id": "4",
+    "name": "Dead Lift Shrug Bar",
+    "featuredImage": "./Media/product_images/Dead_Lift_Shrug_Bar.png",
+    "price": "1100 €",
+    "features": [
+        {
+            "feature1": "Accelerate your weight",
+            "feature2": "The body to have a wider foot stance"
+
+        }
+    ],
+    "reviews": [
+    {
+        "person": "Robert",
+        "comment": "Great Product",
+        "rating": 4
+    },
+
+    {
+        "person": "Sam",
+        "comment": "Excellent Product",
+        "rating": 5
+    }
+
+]
+
+},
+
+{
+    "id": "5",
+    "name": "Hex Dumbbells Solid Pairs",
+    "featuredImage": "./Media/product_images/Hex_Dumbbells_Solid Pairs.png",
+    "price": "700 €",
+    "features": [
+        {
+            "feature1": "Hex dumbbells are ideal for home gym",
+            "feature2": "Better for CrossFit and functional fitness",
+            "feature3": "Floor based exercises"
+
+        }
+    ],
+    "reviews": [
+    {
+        "person": "Peter",
+        "comment": "Great Product",
+        "rating": 5
+    },
+
+    {
+        "person": "Samuel",
+        "comment": "Good Product",
+        "rating": 4
+    }
+
+]
+
+},
+
+{
+    "id": "6",
+    "name": "Dumbbell Set Adjustable",
+    "featuredImage": "./Media/product_images/Dumbbell_Set_Adjustable.png",
+    "price": "949 €",
+    "features": [
+        {
+            "feature1": "Use for joint-isolation exercises",
+            "feature2": "It is use for full-body, multiplanar movements"
+
+        }
+    ],
+    "reviews": [
+    {
+        "person": "Maria",
+        "comment": "Great Product",
+        "rating": 5
+    },
+
+    {
+        "person": "Henry",
+        "comment": "Good Product",
+        "rating": 3
+    },
+
+    {
+        "person":"Nancy",
+        "comment":"Excellent Product",
+        "rating":5
+    }
+
+]
+
+},
+
+
+{
+    "id": "7",
+    "name": "Tricep Bicep Rope",
+    "featuredImage": "./Media/product_images/KOMODO_Tricep_Rope_Bicep_Pull_Down_Cable.png",
+    "price": "650 €",
+    "features": [
+        {
+            "feature1": "Triceps, biceps, shoulders and abs- all effectively trained",
+            "feature2": "Designed to optimise triceps contraction",
+            "feature3": "Heavy Duty Triceps Rope"
+
+        }
+    ],
+    "reviews": [
+    {
+        "person": "Cody",
+        "comment": "Excellent Product",
+        "rating": 5
+    },
+
+    {
+        "person": "Justin",
+        "comment": "Good Product",
+        "rating": 4
+    }
+
+]
+
+},
+
+{
+    "id": "8",
+    "name": "Chest Supported Row",
+    "featuredImage": "./Media/product_images/Chest_Supported_Row.png",
+    "price": "2650 €",
+    "features": [
+        {
+            "feature1": "Increase stability and safety of pull exercise",
+            "feature2": "It works your back, rear shoulders and improves your posture"
+
+        }
+    ],
+    "reviews": [
+    {
+        "person": "Michael",
+        "comment": "Good Product",
+        "rating": 4
+    },
+
+    {
+        "person": "Brendan",
+        "comment": "Great Product",
+        "rating": 4
+    },
+
+    {
+        "person":"Gilbert",
+        "comment":"Excellent Product",
+        "rating":5
+    }
+
+]
+
+},
+
+{
+    "id": "9",
+    "name": "Push Ups Stands",
+    "featuredImage": "./Media/product_images/Push_Ups_Stands.png",
+    "price": "1050 €",
+    "features": [
+        {
+            "feature1": "Engage more muscles to maximize results",
+            "feature2": "360° stability with non-skid platform allows for use on multiple surfaces",
+            "feature3": "Easy storage with stacking handles"
+
+        }
+    ],
+    "reviews": [
+    {
+        "person": "Claudia",
+        "comment": "Good Product",
+        "rating": 4
+    },
+
+    {
+        "person": "John",
+        "comment": "Excellent Product",
+        "rating": 5
+    },
+
+    {
+        "person":"Nancy",
+        "comment":"Good Product",
+        "rating":3
+    }
+
+]
+
+},
+
+{
+    "id": "10",
+    "name": "Leg Exercise 3D Models",
+    "featuredImage": "./Media/product_images/Leg_Exercise_3D_Models.png",
+    "price": "3500 €",
+    "features": [
+        {
+            "feature1": "Strengthens the core",
+            "feature2": "Provides better aesthetics and muscularity"
+
+        }
+    ],
+    "reviews": [
+    {
+        "person": "Monica",
+        "comment": "Excellent Product",
+        "rating": 4
+    },
+
+    {
+        "person": "Albert",
+        "comment": "Great Product",
+        "rating": 3
+    }
+
+]
+
+},
+
+{
+    "id": "11",
+    "name": "Bolt Station Strength Cable Machine",
+    "featuredImage": "./Media/product_images/Bolt_Station_Strength_Cable_Machine.png",
+    "price": "7000 €",
+    "features": [
+        {
+            "feature1": "Lat pull-down",
+            "feature2": "Adjustable cable crossover",
+            "feature3": "Pull-up bar great anchor for suspension training"
+
+        }
+    ],
+    "reviews": [
+    {
+        "person": "Cody",
+        "comment": "Excellent Product",
+        "rating": 5
+    },
+
+    {
+        "person": "John",
+        "comment": "Great Product",
+        "rating": 4
+    },
+
+    {
+        "person": "Neil",
+        "comment": "Awesome Product",
+        "rating": 5
+    }
+
+]
+
+},
+
+{
+    "id": "12",
+    "name": "Pullover Machine",
+    "featuredImage": "./Media/product_images/Pullover_Machine.png",
+    "price": "4500 €",
+    "features": [
+        {
+            "feature1": "Strengthen the chest musculature",
+            "feature2": "It works all pectoral and dorsal muscles at the same time"
+
+        }
+    ],
+    "reviews": [
+    {
+        "person": "Adam",
+        "comment": "Excellent Product",
+        "rating": 5
+    },
+
+    {
+        "person": "Nicole",
+        "comment": "Great Product",
+        "rating": 5
+    },
+
+    {
+        "person": "Smith",
+        "comment": "Awesome Product",
+        "rating": 4
+    }
+
+]
+
+},
+
+{
+    "id": "13",
+    "name": "Decline Sit up Bench",
+    "featuredImage": "./Media/product_images/Decline_Sit_up_Bench.png",
+    "price": "2500 €",
+    "features": [
+        {
+            "feature1": "Ideal for stretching, abs and leg work out",
+            "feature2": "Use for push up and back sit up",
+            "feature3": "Durable and freestanding decline bench"
+
+        }
+    ],
+    "reviews": [
+    {
+        "person": "Ken",
+        "comment": "Great Product",
+        "rating": 4
+    },
+
+    {
+        "person": "Sam",
+        "comment": "Good Product",
+        "rating": 5
+    },
+
+    {
+        "person": "Mike",
+        "comment": "Awesome Product",
+        "rating": 5
+    }
+
+]
+
+},
+
+{
+    "id": "14",
+    "name": "Kamachi Multistation",
+    "featuredImage": "./Media/product_images/Kamachi_Multistation.png",
+    "price": "6500 €",
+    "features": [
+        {
+            "feature1": "Heavy Gauge Construction",
+            "feature2": "Large Comfortable Foam Leg Rolls",
+            "feature3": "Continuous Loop Cable System",
+            "feature4": "Easily Operate able Weight Stacks"
+
+        }
+    ],
+    "reviews": [
+    {
+        "person": "Robert",
+        "comment": "Excellent",
+        "rating": 5
+    },
+
+    {
+        "person": "Sam",
+        "comment": "Good",
+        "rating": 3
+    },
+
+    {
+        "person": "Mike",
+        "comment": "Awesome",
+        "rating": 4
+    }
+
+]
+
+},
+
+{
+    "id": "15",
+    "name": "Titan T1 Gym",
+    "featuredImage": "./Media/product_images/Titan_T1_Gym.png",
+    "price": "25000 €",
+    "features": [
+        {
+            "feature1": "Unbelievable durability and reliability",
+            "feature2": "Availability of over 100 valuable exercises on a single machine",
+            "feature3": "Possibility of quick adjustment and transitions between the exercises"
+
+        }
+    ],
+    "reviews": [
+    {
+        "person": "Cody",
+        "comment": "Excellent",
+        "rating": 5
+    },
+
+    {
+        "person": "Michael",
+        "comment": "Great Product",
+        "rating": 4
+    },
+
+    {
+        "person": "Mike",
+        "comment": "Awesome",
+        "rating": 5
+    }
+
+]
+
+},
+
+{
+    "id": "16",
+    "name": "TuffStuff Apollo",
+    "featuredImage": "./Media/product_images/TuffStuff_Apollo_7400.png",
+    "price": "17000 €",
+    "features": [
+        {
+            "feature1": "Allows multiple simultaneous users",
+            "feature2": "Three independent 200 kgs. steel weight stacks",
+            "feature3": "Compact footprint helps to conserve space"
+
+        }
+    ],
+    "reviews": [
+    {
+        "person": "Alan",
+        "comment": "Awesome",
+        "rating": 5
+    },
+
+    {
+        "person": "Mike",
+        "comment": "Great",
+        "rating": 4
+    },
+
+    {
+        "person": "Tyson",
+        "comment": "Excellent",
+        "rating": 5
+    }
+
+]
+
+},
+
+{
+    "id": "17",
+    "name": "Hack Squat Machine",
+    "featuredImage": "./Media/product_images/Hack_Squat_Machine.png",
+    "price": "9000 €",
+    "features": [
+        {
+            "feature1": "It works the entire lower body",
+            "feature2": "hack squat removes some stabilization aspects of regular squats"
+
+        }
+    ],
+    "reviews": [
+    {
+        "person": "Glen",
+        "comment": "Good",
+        "rating": 4
+    },
+
+    {
+        "person": "Robert",
+        "comment": "Awesome",
+        "rating": 5
+    },
+
+    {
+        "person": "Kelly",
+        "comment": "Excellent",
+        "rating": 5
+    }
+
+]
+
+},
+
+{
+    "id": "18",
+    "name": "Bolt Seated Leg Cul",
+    "featuredImage": "./Media/product_images/Bolt_Seated_Leg_Cul.png",
+    "price": "5500 €",
+    "features": [
+        {
+            "feature1": "Use to increase overall leg strength",
+            "feature2": "It can engage in a fantastic lower body workout"
+
+        }
+    ],
+    "reviews": [
+    {
+        "person": "Claudia",
+        "comment": "Great",
+        "rating": 5
+    },
+
+    {
+        "person": "Samuel",
+        "comment": "Good",
+        "rating": 3
+    },
+
+    {
+        "person": "Henry",
+        "comment": "Excellent",
+        "rating": 5
+    }
+
+]
+
+},
+
+{
+    "id": "19",
+    "name": "Peloton Indoor Exercise Bicycle",
+    "featuredImage": "./Media/product_images/Peloton_Indoor_Exercise_Bicycle.png",
+    "price": "2500 €",
+    "features": [
+        {
+            "feature1": "It includes an LCD monitor for viewing live-streamed workouts",
+            "feature2": "Running treadmill",
+            "feature3": "Outdoor jogging"
+
+        }
+    ],
+    "reviews": [
+    {
+        "person": "Glen",
+        "comment": "Good",
+        "rating": 4
+    },
+
+    {
+        "person": "Nancy",
+        "comment": "Excellent",
+        "rating": 4
+    },
+
+    {
+        "person": "Michael",
+        "comment": "Great",
+        "rating": 4
+    }
+
+]
+
+},
+
+{
+    "id": "20",
+    "name": "Leg Exercise AZ799",
+    "featuredImage": "./Media/product_images/Leg_Exercise_AZ799.png",
+    "price": "7500 €",
+    "features": [
+        {
+            "feature1": "Maintains good body symmetry",
+            "feature2": "Strengthens the core"
+
+        }
+    ],
+    "reviews": [
+    {
+        "person": "Victoria",
+        "comment": "Good",
+        "rating": 3
+    },
+
+    {
+        "person": "Adam",
+        "comment": "Great",
+        "rating": 3
+    }
+
+]
+
+},
+
+{
+    "id": "21",
+    "name": "Ab Power Wheel",
+    "featuredImage": "./Media/product_images/Ab_Power_Wheel.png",
+    "price": "200 €",
+    "features": [
+        {
+            "feature1": "Ab wheels work core muscles",
+            "feature2": "Wheel roller to do exercises for flat belly"
+
+        }
+    ],
+    "reviews": [
+    {
+        "person": "Nicole",
+        "comment": "Excellent",
+        "rating": 2
+    },
+
+    {
+        "person": "Claudia",
+        "comment": "Excellent",
+        "rating": 2
+    },
+
+    {
+        "person": "Nancy",
+        "comment": "Awesome",
+        "rating": 2
+    }
+
+]
+
+},
+
+{
+    "id": "22",
+    "name": "Spin Exercise",
+    "featuredImage": "./Media/product_images/Spin_Exercise.png",
+    "price": "3200 €",
+    "features": [
+        {
+            "feature1": "Low impact exercise",
+            "feature2": "Increases cardiovascular fitness",
+            "feature3": "Lean muscles definition for your legs and core"
+
+        }
+    ],
+    "reviews": [
+    {
+        "person": "Andrew",
+        "comment": "Excellent",
+        "rating": 1
+    },
+
+    {
+        "person": "Robert",
+        "comment": "Great",
+        "rating": 1
+    },
+
+    {
+        "person": "Claudia",
+        "comment": "Awesome",
+        "rating": 1
+    }
+
+]
+
+}
+
+]

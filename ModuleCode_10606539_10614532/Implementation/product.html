@@ -1,11 +1,239 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
+<!--
+    **********************************************************************************************************************************************************************
+    **********************************BEGINNING OF HEAD TAG***********************************************************************************************************************************
+    **********************************************************************************************************************************************************************
+-->
+<head>
+  <link rel="icon" href="./media/icon.png">
+  <meta name="viewport" content="width=device-width">
+  <title>Irish Fitness Factory</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="./CSS/webstyle.css" media="screen and (min-width: 680px)">
+  <link rel="stylesheet" href="./CSS/mobilestyle.css" media="screen and (max-width: 680px)">
+</head>
 
-    </head>
-    
-    <body>
+<!--
+    **********************************************************************************************************************************************************************
+    **********************************BEGINNING OF BODY TAG***********************************************************************************************************************************
+    **********************************************************************************************************************************************************************
+-->
 
-    </body>
+<body>
+  <div>
+    <div class="container">
+      <div class="logo" onclick="NavigateHome()"></div>
+      <a href="./product.html?checkout=true">
+        <div class="cart"><span id="cartcount"></span></div>
+      </a>
+      <div class="nav">
+        <div class="nav-links">
+          <ul class="navLinks">
+           
+          </ul>
+        </div>
+      </div>
+    </div>
 
+    <div id="productdetail" class="main">
+      <div class='breadcrum'> <span> <a class='breadcrumlinks' href='./index.html'> Home </a> /&nbsp;</span> <span
+          id="categorylink"></span> <span id='product_name'> </span> </div>
+      <ul id="product-card" class="cards">
+      </ul>
+    </div>
+
+  </div>
+  <div id="modal">
+    <div class="modal-content">
+      <div class="header">
+        <h2>Modal Header</h2>
+      </div>
+      <div class="copy">
+        <p>Modal Body</p>
+        <a href="#">Close Link</a>
+      </div>
+    </div>
+    <div class="overlay"></div>
+  </div>
+
+  <div id="cart">
+    <div class="main">
+      <div class='breadcrum'> <span> <a class='breadcrumlinks' href='./index.html'> Home </a> </span>
+        <span>&nbsp;/&nbsp;Checkout</span> <span id='product_name'> </span> </div>
+      <ul id="product-card" class="cards">
+      </ul>
+    </div>
+    <br /><br />
+    <div class="cartmsg">There are no items in the cart</div>
+
+    <div class="row">
+      <div class="col-45">
+        <div class="cartcontainer">
+          <h4>Cart
+            <span class="price" style="color:black">
+              <i class="fa fa-shopping-cart"></i>
+            </span>
+          </h4>
+          <div id="cartitems"> </div>
+          <hr>
+          <p>Total <span class="totalprice" style="color:black"><b></b></span></p>
+        </div>
+      </div>
+
+      <div class="col-55">
+        <div class="cartcontainer">
+          <form action="/action_page.php">
+
+            <div class="row">
+              <div class="col-50">
+                <h3>Billing Address</h3>
+                <label for="fname"><i class="fa fa-user"></i> Full Name</label>
+                <input class="forminput" type="text" id="fname" name="firstname" placeholder="Name">
+                <label for="email"><i class="fa fa-envelope"></i> Email</label>
+                <input class="forminput" type="text" id="email" name="email" placeholder="name@gmail.com">
+                <label for="adr"><i class="fa fa-address-card-o"></i> Address</label>
+                <input class="forminput" type="text" id="adr" name="address" placeholder="Dublin1">
+                <label for="city"><i class="fa fa-institution"></i> City</label>
+                <input class="forminput" type="text" id="city" name="city" placeholder="Dublin">
+
+                <div class="row">
+                  <div class="col-50">
+                    <label for="state">Country</label>
+                    <input class="forminput" type="text" id="state" name="state" placeholder="Ireland">
+                  </div>
+                  <div class="col-50">
+                    <label for="zip">Eir Code</label>
+                    <input class="forminput" type="text" id="zip" name="zip" placeholder="D0101">
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-50">
+                <h3>Payment</h3>
+
+                <label for="cname">Name on Card</label>
+                <input class="forminput" type="text" id="cname" name="cardname" placeholder="Name as per card">
+                <label for="ccnum">Credit card number</label>
+                <input class="forminput" type="text" id="ccnum" name="cardnumber" placeholder="1111-2222-3333-4444">
+                <label for="expmonth">Exp Month</label>
+                <input class="forminput" type="text" id="expmonth" name="expmonth" placeholder="September">
+
+                <div class="row">
+                  <div class="col-50">
+                    <label for="expyear">Exp Year</label>
+                    <input class="forminput" type="text" id="expyear" name="expyear" placeholder="2027">
+                  </div>
+                  <div class="col-50">
+                    <label for="cvv">CVV</label>
+                    <input class="forminput" type="text" id="cvv" name="cvv" placeholder="352">
+                  </div>
+                </div>
+              </div>
+            </div>
+            <input type="submit" value="Continue to checkout" class="btn-grad">
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!--
+    **********************************************************************************************************************************************************************
+    **********************************BEGINNING OF SCRIPT TAG***********************************************************************************************************************************
+    **********************************************************************************************************************************************************************
+-->
+
+  <script src="./JS/main.js"></script>
+
+  <script>
+    $(document).ready(function () {
+      $(".cartmsg").hide();
+      cartqstring = "";
+      $("#cart").hide();
+      $(".modal").hide();
+      products_list = JSON.parse(localStorage.getItem("json"));
+      cartitemshtml = "";
+      final_rating = 0;
+      actual_rating = 0;
+
+      if (localStorage.getItem("cartitems")) {
+        //var qs = document.location.href.split('?checkout=true')[1];
+        var qs = localStorage.getItem("cartitems");
+        var parts = qs.split('&');
+        var arr = [];
+        itemslist = [];
+        qtylist = [];
+        product_name = "";
+        product_price = "";
+        totalprice = 0;
+
+        $.each(parts, function () {
+          var val = this.split('=')[1];
+          arr.push(val);
+        }); console.log(arr)
+
+        for (var i = 0; i < arr.slice(1).length; i++) {
+          itemslist.push(arr.slice(1)[i].split(':')[0]);
+          qtylist.push(arr.slice(1)[i].split(':')[1]);
+        }
+
+        $("#cartcount").text(itemslist.length);
+
+        for (var i = 0; i < itemslist.length; i++) {
+          product_name = products_list.filter(function (data) {
+            return data.id == String(itemslist[i]);
+          })[0].name;
+
+          product_price = products_list.filter(function (data) {
+            return data.id == String(itemslist[i]);
+          })[0].price;
+
+          cartitemshtml += "<br/><div><a id='productlink' href='#'>" + product_name + " (" + qtylist[i] + ")</a> <span class='price'>" + parseInt(qtylist[i]) * parseInt(product_price.split('€')[1].trim()) + "</span></div><br/>";
+          totalprice += parseInt(qtylist[i]) * parseInt(product_price.split('€')[1].trim());
+        }
+
+        $("#cartitems").append(cartitemshtml);
+        $('.totalprice').html(totalprice);
+      }
+
+      else {
+        $(".row").hide();
+        $(".cartmsg").show();
+      }
+
+      if (getUrlParameter("checkout") == "true") {
+        $("#cart").show();
+        $("#productdetail").hide();
+        $('li').removeClass('active');
+      }
+
+      else {
+        GetProductDetailHtml();
+      }
+    });
+
+
+    $(window).on("load", function () {
+      SetProductDetailCSS();
+      $('li').removeClass('active');
+    });
+
+    function AddtoCart() {
+      if (localStorage.getItem("cartitems")) {
+        cartqstring = localStorage.getItem("cartitems");
+      }
+
+      else {
+        cartqstring = "";
+      }
+
+      cartqstring += "&id=" + product_data[0].id + ":" + parseInt($("#productqty :selected").text());
+      localStorage.setItem("cartitems", cartqstring);
+      document.location.href = "./product.html?checkout=true" + cartqstring;
+    }
+  </script>
+</body>
 </html>
