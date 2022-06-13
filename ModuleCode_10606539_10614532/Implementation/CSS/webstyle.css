@@ -99,13 +99,13 @@
   }
 
   .nav>.nav-links>ul li:hover {
-    background-color: #02AAB0;
+    background-color: #7ddfb3; /*#02AAB0;*/
     /*#5ED2B2;*/
     border-radius: 5px;
   }
 
   .nav>.nav-links>ul li.active {
-    background-color: #02AAB0;
+    background-color: #7ddfb3; /*#02AAB0;*/
     /*#5ED2B2;*/
     border-radius: 5px;
   }
@@ -347,7 +347,7 @@
     overflow: hidden;
     height: 36px;
     /*padding: 0 0 0 5px;*/
-    border: 2px solid #02AAB0;
+    border: 2px solid #7ddfb3; /*#02AAB0;*/
     border-radius: 4px 0 0 4px;
   }
 
@@ -397,7 +397,7 @@
     top: 0;
     width: 40px;
     height: 36px;
-    background-color: #02AAB0;
+    background-color: #7ddfb3; /*#02AAB0;*/
     border-radius: 0 4px 4px 0;
     cursor: pointer;
     background-image: url("../Media/search.png");
@@ -544,7 +544,7 @@
     color: black;
     text-align: center;
     border-radius: 6px;
-    padding: 2px 15px 2px 3px;
+    padding: 2px 15px 2px 5px;
     /*top, right, bottom, and left*/
     position: absolute;
     z-index: 1;
@@ -710,14 +710,11 @@
     width: 65%;
     box-shadow: 0 3px 7px rgba(0, 0, 0, .25);
     box-sizing: border-box;
-    transition: all .4s ease-in-out;
-    -moz-transition: all .4s ease-in-out;
-    -webkit-transition: all .4s ease-in-out
   }
 
   #modal:target {
     opacity: 1;
-    top: 50%;
+    top: 60%;
     visibility: visible
   }
 
@@ -730,13 +727,14 @@
 
   #modal .footer {
     border: none;
-    border-top: 1px solid #e7e7e7;
+    border-top: 1px solid white;
     border-radius: 0 0 5px 5px
   }
 
   #modal h2 {
     margin: 0;
-    color: #fff
+    color: black;
+    font-size: 18px;
   }
 
   #modal .btn {
@@ -747,7 +745,8 @@
   #modal .header,
   #modal .footer {
     padding: 10px;
-    color: #fff
+    color: black;
+    width: 100%;
   }
 
   .modal-content {
@@ -755,11 +754,16 @@
     position: relative;
     z-index: 20;
     border-radius: 5px;
-    color: #fff
+    color: #fff;
   }
 
   #modal .copy {
-    background: #46CFB0
+    background: white;
+  }
+
+  .copy span{
+    font-size:14px;
+    margin: 10px;
   }
 
   #modal .overlay {
@@ -773,13 +777,20 @@
     z-index: 10
   }
 
-  .copy a {
-    color: #fff;
+  .header a {
+    color: black;
     text-decoration: none;
-    display: inline-block;
+    /*display: inline-block;*/
+    float:right;
     padding: 5px 10px;
     border-radius: 5px;
-    background-color: #E74C3C;
+    background-color: #7ddfb3;
+  }
+
+  #Modalclosebtn
+  {
+    font-size:18px;
+    font-weight: 400;
   }
 
 
@@ -862,6 +873,11 @@
     float: left;
     padding-left: 5px;
     font-size: 14px;
+  }
+
+  #lblqty
+  {
+    margin-left:-5px;
   }
 
   .icon-container {

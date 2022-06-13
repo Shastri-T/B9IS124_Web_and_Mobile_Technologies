@@ -1,11 +1,21 @@
 @import "webstyle.css";
 
-  
+  .logo
+  {
+    height:100px;
+    width:100px;
+  }  
+
   @media screen and (max-width:680px) {
 
-    ul.navLinks li:not(:last-child) 
+    ul.navLinks li:not(:first-child) 
     {
         display: none;
+    }
+
+    .cart
+    {
+      margin-top:90px;
     }
 
     ul.navLinks li.icon {
