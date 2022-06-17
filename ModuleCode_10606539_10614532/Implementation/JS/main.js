@@ -1024,6 +1024,12 @@ $("#productsearch").keyup(function (event) {
         //console.log(products_list);
         GetProductHtml(products_list);
     }
+
+    //added code to set card width, if search displays one result
+    if($(".cards_item").length==1)
+    {
+        $('.cards_item').css("width","65%");
+    }
 });
 
 
@@ -1068,16 +1074,21 @@ if (category != "") {
     $(".navLinks>li>a:contains('" + category + "')").parent().click();
 }
 
-if ($('.navLinks>li.active')[0].textContent.trim() != "Home") {
-    products_list = [];
-    products_list = JSON.parse(localStorage.getItem("json"));
-
-    products_list = products_list.filter(function (i) {
-        return i.category == $('.navLinks>li.active')[0].textContent.trim();
-    });
-    //console.log(products_list);
-    GetProductHtml(products_list);
+if($('.navLinks>li').hasClass('active'))
+{
+    if ($('.navLinks>li.active')[0].textContent.trim() != "Home") {
+        products_list = [];
+        products_list = JSON.parse(localStorage.getItem("json"));
+    
+        products_list = products_list.filter(function (i) {
+            return i.category == $('.navLinks>li.active')[0].textContent.trim();
+        });
+        //console.log(products_list);
+        GetProductHtml(products_list);
+    }
 }
+
+
 
 else {
     products_list = [];
@@ -1101,17 +1112,18 @@ $(document).ready(function () {
         $(".navLinks>li>a:contains('" + category + "')").parent().click();
     }
 
-    if ($('.navLinks>li.active')[0].textContent.trim() != "Home") {
-        products_list = [];
-        products_list = JSON.parse(localStorage.getItem("json"));
-
-        products_list = products_list.filter(function (i) {
-            return i.category == $('.navLinks>li.active')[0].textContent.trim();
-        });
-
-        console.log(products_list);
-
-        GetProductHtml(products_list);
+    if($('.navLinks>li').hasClass('active'))
+    {
+        if ($('.navLinks>li.active')[0].textContent.trim() != "Home") {
+            products_list = [];
+            products_list = JSON.parse(localStorage.getItem("json"));
+    
+            products_list = products_list.filter(function (i) {
+                return i.category == $('.navLinks>li.active')[0].textContent.trim();
+            });
+            //console.log(products_list);
+            GetProductHtml(products_list);
+        }
     }
 
     else {
@@ -1325,7 +1337,7 @@ function getUrlParameter(sParam) {
 
 /********************* function to show navigation menu icon for mobile devices ************************/
 
-function myFunction() {
+function ToggleMenu() {
     $(".navLinks")[0].classList.toggle("responsive");
 }
 

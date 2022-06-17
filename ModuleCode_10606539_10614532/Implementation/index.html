@@ -28,7 +28,7 @@
             <div class="nav-links">
                 <ul class="navLinks">
                     <li class="icon">
-                        <a href="javascript:void(0);" style="font-size:15px;" onclick="myFunction()">☰</a></li>
+                        <a href="javascript:void(0);" style="font-size:15px;" onclick="ToggleMenu()">☰</a></li>
                 </ul>
             </div>
         </div>
@@ -68,8 +68,10 @@
             cartitemshtml = "";
             if (localStorage.getItem("cartitems")) {
 
-                //var qs = document.location.href.split('?checkout=true')[1];
-                var qs = localStorage.getItem("cartitems");
+                cartval =  JSON.parse(localStorage.getItem("cartitems"));
+                $("#cartcount").text(cartval.length);
+
+                /*var qs = localStorage.getItem("cartitems");
                 var parts = qs.split('&');
                 var arr = [];
                 itemslist = [];
@@ -104,7 +106,7 @@
                 }
 
                 $("#cartitems").append(cartitemshtml);
-                $('.totalprice').html(totalprice);
+                $('.totalprice').html(totalprice);*/
             }
 
             else {

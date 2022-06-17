@@ -31,7 +31,8 @@
       <div class="nav">
         <div class="nav-links">
           <ul class="navLinks">
-           
+            <li class="icon">
+              <a href="javascript:void(0);" style="font-size:15px;" onclick="ToggleMenu()">☰</a></li>
           </ul>
         </div>
       </div>
@@ -167,7 +168,9 @@
   <script>
     $(document).ready(function () {
       $(".cartmsg").hide();
-      cartqstring = "";
+      //cartqstring = "";
+      cartvalue=[];
+      cartval=[];
       $("#cart").hide();
       $(".modal").hide();
       products_list = JSON.parse(localStorage.getItem("json"));
@@ -175,18 +178,40 @@
       final_rating = 0;
       actual_rating = 0;
       cartitemexists=false;
+      /*updated cart reference from local storage*/
+      if(localStorage.getItem("cartitems")) {
+        product_name = "";
+        product_price = "";
+        totalprice = 0;  
+        cartval =  JSON.parse(localStorage.getItem("cartitems"));
+        $("#cartcount").text(cartval.length);
 
-      if (localStorage.getItem("cartitems")) {
-        //var qs = document.location.href.split('?checkout=true')[1];
-        var qs = localStorage.getItem("cartitems");
+        for(var i = 0; i < cartval.length; i++){
+          product_name = products_list.filter(function (data) {
+            return data.id == String(cartval[i].split("-")[0]);
+          })[0].name;
+
+          product_price = products_list.filter(function (data) {
+            return data.id == String(cartval[i].split("-")[0]);
+          })[0].price;
+
+          cartitemshtml += "<br/><div><span><img style='height:15px;width:15px' src='./Media/bin.png'></img></span><a id='productlink' href='#'>" + product_name + " (" + cartval[i].split("-")[1] + ")</a> <span class='price'> € " + parseInt(cartval[i].split("-")[1]) * parseInt(product_price.split('€')[1].trim()) + "</span></div><br/>";
+          totalprice += parseInt(cartval[i].split("-")[1]) * parseInt(product_price.split('€')[1].trim());
+        }
+
+        $("#cartitems").append(cartitemshtml);
+        $('.totalprice').html("<b>Total: € "+totalprice+"</b>");
+
+        /*cart reference from querystring*/
+        //var qs = document.location.href.split('?checkout=true')[1];        
+        /*var qs = localStorage.getItem("cartitems");
         var parts = qs.split('&');
         var arr = [];
         itemslist = [];
         qtylist = [];
         product_name = "";
         product_price = "";
-        totalprice = 0;
-        
+        totalprice = 0;        
 
         $.each(parts, function () {
           var val = this.split('=')[1];
@@ -214,7 +239,7 @@
         }
 
         $("#cartitems").append(cartitemshtml);
-        $('.totalprice').html("<b>Total: € "+totalprice+"</b>");
+        $('.totalprice').html("<b>Total: € "+totalprice+"</b>");*/
       }
 
       else {
@@ -222,7 +247,7 @@
         $(".cartmsg").show();
       }
 
-      if (getUrlParameter("checkout") == "true") {
+      if(getUrlParameter("checkout") == "true") {
         $("#cart").show();
         $("#productdetail").hide();
         $('li').removeClass('active');
@@ -241,10 +266,12 @@
       $('li').removeClass('active');
     });
 
-    function AddtoCart() {
-      if (localStorage.getItem("cartitems")) {
-        cartqstring = localStorage.getItem("cartitems");
 
+    function AddtoCart() {
+      if(localStorage.getItem("cartitems")) {
+        cartvalue = localStorage.getItem("cartitems");
+        cartvalue.push(product_data[0].id + ":" + parseInt($("#productqty :selected").text())); 
+       /*
         for (var i = 0; i < itemslist.length; i++) {
           if(product_data[0].id==itemslist[i])
           {
@@ -263,17 +290,17 @@
 
         else{
           cartqstring += "&id=" + product_data[0].id + ":" + parseInt($("#productqty :selected").text());
-        }
-        
+        }*/        
       }
 
       else {
-        cartqstring = "";
-        cartqstring += "&id=" + product_data[0].id + ":" + parseInt($("#productqty :selected").text());
+        cartvalue=[];
+        cartvalue[0]=product_data[0].id + "-" + parseInt($("#productqty :selected").text());
+        /*cartqstring = "";
+        cartqstring += "&id=" + product_data[0].id + ":" + parseInt($("#productqty :selected").text());*/
       }
-      
-      localStorage.setItem("cartitems", cartqstring);
-      document.location.href = "./product.html?checkout=true" + cartqstring;
+      localStorage.setItem("cartitems", JSON.stringify(cartvalue));
+      document.location.href = "./product.html?checkout=true";
     }
   </script>
 </body>

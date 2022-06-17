@@ -1,21 +1,53 @@
 @import "webstyle.css";
 
-  .logo
-  {
-    height:100px;
-    width:100px;
-  }  
-
   @media screen and (max-width:680px) {
-
-    ul.navLinks li:not(:first-child) 
+    /*set top header width*/
+    .container
     {
-        display: none;
+      margin:10px;
+      width: auto;
+    }
+
+    /*to fit entire content width onto screen*/
+    html {
+      width: fit-content;
+    };
+
+    /*set the product description width*/
+
+    .product_card_desc
+    {
+      width: 100%;
+    }
+
+    .hm-middle
+    {
+      width:140%;
     }
 
     .cart
     {
-      margin-top:90px;
+      margin: 0px;
+    }
+
+    .nav>.nav-links
+    {
+      display: block;
+    }
+
+    .logo
+    {
+      width:100px;
+    }
+
+    .navLinks
+    {
+      float:right;
+    }
+
+    ul.navLinks li:not(:first-child) 
+    {
+        display: none;
     }
 
     ul.navLinks li.icon {
@@ -54,8 +86,4 @@
     img{
       height: 100%;
       }
-
-      .container{
-        width: 90%;
-        }
   }
